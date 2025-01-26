@@ -1,8 +1,19 @@
 import 'package:flutter/material.dart';
 
-class ScreenNori extends StatelessWidget {
+class ScreenNori extends StatefulWidget {
+  const ScreenNori({super.key});
+
+  @override
+  State<ScreenNori> createState() => _NoriState();
+}
+
+class _NoriState extends State<ScreenNori> {
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('NORI'),
+      ),
+    );
   }
 }
