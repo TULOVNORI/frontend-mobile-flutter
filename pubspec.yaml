@@ -22,6 +22,10 @@ flutter:
 
   uses-material-design: true
   assets:
+    - images/yut/background.png
+    - images/yut/yut_0.png
+    - images/yut/yut_1.png
+    - images/yut/yut_2.png
     - images/yut/main.png
     - images/dice/main.png
     - images/deck/main.png

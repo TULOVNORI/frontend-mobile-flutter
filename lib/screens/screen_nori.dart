@@ -75,7 +75,9 @@ class _NoriState extends State<ScreenNori> {
                         color: Colors.indigo,
                       ),
                     ),
-                    onPressed: () async {},
+                    onPressed: () async {
+                      await Navigator.pushNamed(context, '/${args["key"]}');
+                    },
                     // style: ButtonStyle(
                     //   backgroundColor: MaterialColor(primary, swatch),
                     // ),

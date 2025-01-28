@@ -24,9 +24,9 @@ class _ScreenIndexState extends State<ScreenIndex> {
       body: Container(
         decoration: BoxDecoration(
           gradient: LinearGradient(
-            begin: Alignment.topCenter, // 그라디언트 시작점
-            end: Alignment.bottomCenter, // 그라디언트 끝점
-            colors: [Color(0xFF00b1a5), Color(0xFF0d1b2b)], // 그라디언트 색상
+            begin: Alignment.topCenter,
+            end: Alignment.bottomCenter,
+            colors: [Color(0xFF00b1a5), Color(0xFF0d1b2b)],
           ),
         ),
         child: Container(
