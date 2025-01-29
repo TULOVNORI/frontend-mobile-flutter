@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:tulovnori/screens/screen_index.dart';
 import 'package:tulovnori/screens/screen_nori.dart';
 import 'package:tulovnori/plays/yut/play_screen_yut.dart';
+import 'package:tulovnori/plays/dice/play_screen_dice.dart';
+import 'package:tulovnori/plays/deck/play_screen_deck.dart';
 
 void main() {
   runApp(TulovnoriApp());
@@ -21,7 +23,9 @@ class TulovnoriApp extends StatelessWidget {
       routes: {
         '/index': (context) => ScreenIndex(),
         '/nori': (context) => ScreenNori(),
-        '/yut': (context) => PlayScreenYut()
+        '/yut': (context) => PlayScreenYut(),
+        '/dice': (context) => PlayScreenDice(),
+        '/deck': (context) => PlayScreenDeck(),
       },
     );
   }
