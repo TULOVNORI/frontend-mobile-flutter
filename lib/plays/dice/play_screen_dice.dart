@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:tulovnori/plays/dice/one_dice_roller.dart';
+import 'package:tulovnori/plays/dice/two_dice_roller.dart';
 
 class PlayScreenDice extends StatefulWidget {
   const PlayScreenDice({super.key});
@@ -13,7 +14,11 @@ class _PlayScreenDiceState extends State<PlayScreenDice> {
   int diceNumber = 1;
 
   Widget getDiceRoller() {
-    return OneDiceRoller();
+    if (diceNumber == 1) {
+      return OneDiceRoller();
+    } else {
+      return TwoDiceRoller();
+    }
   }
 
   @override
@@ -44,6 +49,7 @@ class _PlayScreenDiceState extends State<PlayScreenDice> {
             Container(
               child: Center(
                 child: Container(
+                  height: 50,
                   decoration: BoxDecoration(
                     color: Colors.grey.shade300, // 전체 배경색 설정
                     borderRadius: BorderRadius.circular(15),
@@ -55,7 +61,7 @@ class _PlayScreenDiceState extends State<PlayScreenDice> {
                         for (int i = 0; i < isSelected.length; i++) {
                           isSelected[i] = i == selectedNum;
                         }
-                        diceNumber = selectedNum;
+                        diceNumber = selectedNum + 1;
                       });
                     },
                     borderRadius: BorderRadius.circular(15),

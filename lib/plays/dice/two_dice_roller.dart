@@ -3,20 +3,23 @@ import 'dart:math';
 
 final randomizer = Random();
 
-class OneDiceRoller extends StatefulWidget {
-  const OneDiceRoller({super.key});
+class TwoDiceRoller extends StatefulWidget {
+  const TwoDiceRoller({super.key});
 
   @override
-  State<OneDiceRoller> createState() => _OneDiceRollerState();
+  State<TwoDiceRoller> createState() => _TwoDiceRollerState();
 }
 
-class _OneDiceRollerState extends State<OneDiceRoller> {
-  var diceNum = 1;
+class _TwoDiceRollerState extends State<TwoDiceRoller> {
+  var diceNum1 = 1;
+  var diceNum2 = 1;
 
   void rollDice() {
-    var number = randomizer.nextInt(5) + 1;
+    var number1 = randomizer.nextInt(6) + 1;
+    var number2 = randomizer.nextInt(6) + 1;
     setState(() {
-      diceNum = number;
+      diceNum1 = number1;
+      diceNum2 = number2;
     });
   }
 
@@ -39,10 +42,27 @@ class _OneDiceRollerState extends State<OneDiceRoller> {
           Expanded(
             flex: 404,
             child: Container(
-              alignment: Alignment.center,
-              width: screenWidth * 0.5,
-              child: Image(
-                image: AssetImage('images/dice/dice_$diceNum.png'),
+              child: Row(
+                children: [
+                  Expanded(
+                    flex: 1,
+                    child: Container(
+                      width: screenWidth * 0.45,
+                      child: Image(
+                        image: AssetImage('images/dice/dice_$diceNum1.png'),
+                      ),
+                    ),
+                  ),
+                  Expanded(
+                    flex: 1,
+                    child: Container(
+                      width: screenWidth * 0.45,
+                      child: Image(
+                        image: AssetImage('images/dice/dice_2$diceNum2.png'),
+                      ),
+                    ),
+                  ),
+                ],
               ),
             ),
           ),

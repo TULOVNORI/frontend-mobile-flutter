@@ -14,7 +14,7 @@ class _ScreenIndexState extends State<ScreenIndex> {
 
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Color(0xFF00b1a5),
+        backgroundColor: Color(0xFF222222),
         title: Text(
           'TULOVNORI',
           style: TextStyle(
@@ -23,11 +23,7 @@ class _ScreenIndexState extends State<ScreenIndex> {
       ),
       body: Container(
         decoration: BoxDecoration(
-          gradient: LinearGradient(
-            begin: Alignment.topCenter,
-            end: Alignment.bottomCenter,
-            colors: [Color(0xFF00b1a5), Color(0xFF0d1b2b)],
-          ),
+          color: Color(0xFF222222),
         ),
         child: Container(
           child: Center(
@@ -43,11 +39,7 @@ class _ScreenIndexState extends State<ScreenIndex> {
                   ),
                   child: Container(
                     decoration: BoxDecoration(
-                      gradient: LinearGradient(
-                        colors: [Colors.indigo, Colors.black],
-                        begin: Alignment.topLeft, // 시작 위치
-                        end: Alignment.bottomRight, // 끝 위치
-                      ),
+                      color: Color(0xFF00709b),
                       borderRadius: BorderRadius.circular(15),
                     ),
                     width: screenWidth * 0.9,
@@ -116,11 +108,7 @@ class _ScreenIndexState extends State<ScreenIndex> {
                   ),
                   child: Container(
                     decoration: BoxDecoration(
-                      gradient: LinearGradient(
-                        colors: [Colors.indigo, Colors.black],
-                        begin: Alignment.topLeft, // 시작 위치
-                        end: Alignment.bottomRight, // 끝 위치
-                      ),
+                      color: Color(0xFF7a4b78),
                       borderRadius: BorderRadius.circular(15),
                     ),
                     width: screenWidth * 0.9,
@@ -189,11 +177,7 @@ class _ScreenIndexState extends State<ScreenIndex> {
                   ),
                   child: Container(
                     decoration: BoxDecoration(
-                      gradient: LinearGradient(
-                        colors: [Colors.indigo, Colors.black],
-                        begin: Alignment.topLeft, // 시작 위치
-                        end: Alignment.bottomRight, // 끝 위치
-                      ),
+                      color: Color(0xFF367743),
                       borderRadius: BorderRadius.circular(15),
                     ),
                     width: screenWidth * 0.9,
