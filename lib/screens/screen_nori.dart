@@ -30,9 +30,9 @@ class _NoriState extends State<ScreenNori> {
           padding: EdgeInsets.all(20),
           decoration: BoxDecoration(
             gradient: LinearGradient(
-              begin: Alignment.topCenter, // 그라디언트 시작점
-              end: Alignment.bottomCenter, // 그라디언트 끝점
-              colors: [Colors.indigo, Colors.black], // 그라디언트 색상
+              begin: Alignment.topCenter,
+              end: Alignment.bottomCenter,
+              colors: [Colors.indigo, Colors.black],
             ),
           ),
           child: Column(
@@ -42,7 +42,7 @@ class _NoriState extends State<ScreenNori> {
                 flex: 4,
                 child: Image(
                   image: ResizeImage(
-                    AssetImage('assets/images/${args["key"]}/main.png'),
+                    AssetImage('assets/images/${args["nori"]}/main.png'),
                     width: (screenWidth * 0.8).toInt(),
                   ),
                 ),
@@ -76,7 +76,7 @@ class _NoriState extends State<ScreenNori> {
                       ),
                     ),
                     onPressed: () async {
-                      await Navigator.pushNamed(context, '/${args["key"]}');
+                      await Navigator.pushNamed(context, '/${args["nori"]}');
                     },
                     // style: ButtonStyle(
                     //   backgroundColor: MaterialColor(primary, swatch),

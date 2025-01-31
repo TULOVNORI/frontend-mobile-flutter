@@ -1,4 +1,7 @@
+import 'dart:convert';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart' show rootBundle;
+import 'package:tulovnori/widgets/card_widget.dart';
 
 class ScreenIndex extends StatefulWidget {
   const ScreenIndex({super.key});
@@ -8,6 +11,27 @@ class ScreenIndex extends StatefulWidget {
 }
 
 class _ScreenIndexState extends State<ScreenIndex> {
+  late List<dynamic> noriData = [];
+  late Map<String, dynamic> noriStyle = {};
+
+  @override
+  void initState() {
+    super.initState();
+    loadNoriData();
+  }
+
+  Future<void> loadNoriData() async {
+    String noriJson = await rootBundle.loadString('assets/en.json');
+    String noriStyleJson = await rootBundle.loadString('assets/styles.json');
+    Map<String, dynamic> styleJsonMap = jsonDecode(noriStyleJson);
+
+    setState(() {
+      noriData = jsonDecode(noriJson)['noris'];
+      noriStyle = styleJsonMap;
+      print(noriStyle.toString());
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     double screenWidth = MediaQuery.of(context).size.width;
@@ -25,218 +49,33 @@ class _ScreenIndexState extends State<ScreenIndex> {
         decoration: BoxDecoration(
           color: Color(0xFF222222),
         ),
-        child: Container(
-          child: Center(
+        child: Center(
+          child: Container(
+            width: screenWidth * 0.9,
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.center,
+              mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Card(
-                  color: Colors.transparent,
-                  margin: EdgeInsets.only(top: 20, bottom: 20),
-                  elevation: 5,
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(15),
-                  ),
-                  child: Container(
-                    decoration: BoxDecoration(
-                      color: Color(0xFF00709b),
-                      borderRadius: BorderRadius.circular(15),
-                    ),
-                    width: screenWidth * 0.9,
-                    height: 180,
-                    padding: EdgeInsets.all(20),
-                    child: Row(
-                      children: [
-                        Expanded(
-                          flex: 6,
-                          child: Align(
-                            alignment: Alignment.centerLeft,
-                            child: Image(
-                              image: ResizeImage(
-                                AssetImage('assets/images/yut/main.png'),
-                                width: (screenWidth * 0.9 * 0.5).toInt(),
-                              ),
-                            ),
-                          ),
-                        ),
-                        Expanded(
-                          flex: 4,
-                          child: Column(
-                            children: [
-                              Expanded(
-                                flex: 2,
-                                child: Text(
-                                  'YUT NORI',
-                                  style: TextStyle(
-                                    fontWeight: FontWeight.bold,
-                                    fontSize: 20,
-                                    color: Colors.white,
-                                  ),
-                                ),
-                              ),
-                              Expanded(
-                                flex: 1,
-                                child: Center(
-                                  child: ElevatedButton(
-                                    child: Text('윷놀이 도구'),
-                                    onPressed: () async {
-                                      await Navigator.pushNamed(
-                                          context, '/nori',
-                                          arguments: {
-                                            "key": "yut",
-                                            "name": "YUT-NORI",
-                                            "description":
-                                                "Yutnori is a traditional Korean game where you throw four sticks to move your pieces on the board. Use this app to simulate the throws and play Yutnori anytime!",
-                                          });
-                                    },
-                                  ),
-                                ),
-                              )
-                            ],
-                          ),
-                        ),
-                      ],
-                    ),
-                  ),
-                ),
-                Card(
-                  color: Colors.transparent,
-                  margin: EdgeInsets.only(top: 20, bottom: 20),
-                  elevation: 5,
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(15),
-                  ),
-                  child: Container(
-                    decoration: BoxDecoration(
-                      color: Color(0xFF7a4b78),
-                      borderRadius: BorderRadius.circular(15),
-                    ),
-                    width: screenWidth * 0.9,
-                    height: 180,
-                    padding: EdgeInsets.all(20),
-                    child: Row(
-                      children: [
-                        Expanded(
-                          flex: 6,
-                          child: Align(
-                            alignment: Alignment.centerLeft,
-                            child: Image(
-                              image: ResizeImage(
-                                AssetImage('assets/images/dice/main.png'),
-                                width: (screenWidth * 0.9 * 0.5).toInt(),
-                              ),
-                            ),
-                          ),
-                        ),
-                        Expanded(
-                          flex: 4,
-                          child: Column(
-                            children: [
-                              Expanded(
-                                flex: 2,
-                                child: Text(
-                                  'ROLL DICE',
-                                  style: TextStyle(
-                                    fontWeight: FontWeight.bold,
-                                    fontSize: 20,
-                                    color: Colors.white,
-                                  ),
-                                ),
-                              ),
-                              Expanded(
-                                flex: 1,
-                                child: Center(
-                                  child: ElevatedButton(
-                                    child: Text('주사위 던지기'),
-                                    onPressed: () async {
-                                      await Navigator.pushNamed(
-                                          context, '/nori',
-                                          arguments: {
-                                            "key": "dice",
-                                            "name": "ROLL DICE",
-                                            "description":
-                                                "Rolling the dice is a common action in board games to determine the outcome of your move. Use this app to roll the dice virtually and enjoy your favorite board games anytime!",
-                                          });
-                                    },
-                                  ),
-                                ),
-                              )
-                            ],
-                          ),
-                        ),
-                      ],
-                    ),
-                  ),
-                ),
-                Card(
-                  color: Colors.transparent,
-                  margin: EdgeInsets.only(top: 20, bottom: 20),
-                  elevation: 5,
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(15),
-                  ),
-                  child: Container(
-                    decoration: BoxDecoration(
-                      color: Color(0xFF367743),
-                      borderRadius: BorderRadius.circular(15),
-                    ),
-                    width: screenWidth * 0.9,
-                    height: 180,
-                    padding: EdgeInsets.all(20),
-                    child: Row(
-                      children: [
-                        Expanded(
-                          flex: 6,
-                          child: Align(
-                            alignment: Alignment.centerLeft,
-                            child: Image(
-                              image: ResizeImage(
-                                AssetImage('assets/images/deck/main.png'),
-                                width: (screenWidth * 0.9 * 0.5).toInt(),
-                              ),
-                            ),
-                          ),
-                        ),
-                        Expanded(
-                          flex: 4,
-                          child: Column(
-                            children: [
-                              Expanded(
-                                flex: 2,
-                                child: Text(
-                                  'DRAW CARD',
-                                  style: TextStyle(
-                                    fontWeight: FontWeight.bold,
-                                    fontSize: 20,
-                                    color: Colors.white,
-                                  ),
-                                ),
-                              ),
-                              Expanded(
-                                flex: 1,
-                                child: Center(
-                                  child: ElevatedButton(
-                                    child: Text('카드 뽑기'),
-                                    onPressed: () async {
-                                      await Navigator.pushNamed(
-                                          context, '/nori',
-                                          arguments: {
-                                            "key": "deck",
-                                            "name": "DRAW CARD",
-                                            "description":
-                                                "Drawing a card from the deck is a key action in many card games. Use this app to simulate drawing cards and enjoy your favorite card games anytime!",
-                                          });
-                                    },
-                                  ),
-                                ),
-                              )
-                            ],
-                          ),
-                        ),
-                      ],
-                    ),
-                  ),
-                ),
+                noriData.isEmpty
+                    ? CircularProgressIndicator()
+                    : Expanded(
+                        child: ListView.builder(
+                            itemCount: noriData.length,
+                            itemBuilder: (context, index) {
+                              var card = noriData[index];
+                              var nori = card['nori'];
+                              return CardWidget(
+                                nori: nori,
+                                title: card['title'],
+                                description: card['description'],
+                                imagePath:
+                                    'assets/images/${card["nori"]}/main.png',
+                                buttonText: card['buttonText'],
+                                backgroundColor:
+                                    int.parse(noriStyle[nori]['cardColor']),
+                              );
+                            }),
+                      ),
               ],
             ),
           ),
