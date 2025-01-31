@@ -42,7 +42,7 @@ class _NoriState extends State<ScreenNori> {
                 flex: 4,
                 child: Image(
                   image: ResizeImage(
-                    AssetImage('images/${args["key"]}/main.png'),
+                    AssetImage('assets/images/${args["key"]}/main.png'),
                     width: (screenWidth * 0.8).toInt(),
                   ),
                 ),

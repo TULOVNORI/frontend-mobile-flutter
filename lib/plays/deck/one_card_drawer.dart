@@ -48,7 +48,8 @@ class _OneCardDrawerState extends State<OneCardDrawer> {
             child: Container(
               padding: EdgeInsets.all(10),
               color: Colors.transparent,
-              child: Image.asset('images/deck/${number}_of_${shape}.png'),
+              child:
+                  Image.asset('assets/images/deck/${number}_of_${shape}.png'),
             ),
           );
         }),

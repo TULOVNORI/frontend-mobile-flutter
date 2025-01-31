@@ -42,7 +42,7 @@ class _OneDiceRollerState extends State<OneDiceRoller> {
               alignment: Alignment.center,
               width: screenWidth * 0.5,
               child: Image(
-                image: AssetImage('images/dice/dice_$diceNum.png'),
+                image: AssetImage('assets/images/dice/dice_$diceNum.png'),
               ),
             ),
           ),

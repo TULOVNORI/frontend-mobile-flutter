@@ -42,29 +42,49 @@ class _YutRollerState extends State<YutRoller> {
         mainAxisSize: MainAxisSize.min,
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
-          Row(
-            mainAxisSize: MainAxisSize.min,
-            children: [
-              Image.asset(
-                'images/yut/yut_${yutList[0]}.png',
-                width: 60,
-              ),
-              Image.asset(
-                'images/yut/yut_${yutList[1]}.png',
-                width: 60,
-              ),
-              Image.asset(
-                'images/yut/yut_${yutList[2]}.png',
-                width: 60,
-              ),
-              Image.asset(
-                'images/yut/yut_${yutList[3]}.png',
-                width: 60,
-              ),
-            ],
+          Container(
+            // decoration: BoxDecoration(
+            //     gradient: LinearGradient(
+            //         begin: Alignment.topLeft,
+            //         end: Alignment.bottomRight,
+            //         colors: [Color(0xFFe0a74d), Color(0xFFba8e00)])),
+            margin: EdgeInsets.symmetric(horizontal: 10),
+            padding: EdgeInsets.all(20),
+            child: Row(
+              children: [
+                Expanded(
+                  flex: 1,
+                  child: Image.asset(
+                    'assets/images/yut/yut_${yutList[0]}.png',
+                    width: 60,
+                  ),
+                ),
+                Expanded(
+                  flex: 1,
+                  child: Image.asset(
+                    'assets/images/yut/yut_${yutList[1]}.png',
+                    width: 60,
+                  ),
+                ),
+                Expanded(
+                  flex: 1,
+                  child: Image.asset(
+                    'assets/images/yut/yut_${yutList[2]}.png',
+                    width: 60,
+                  ),
+                ),
+                Expanded(
+                  flex: 1,
+                  child: Image.asset(
+                    'assets/images/yut/yut_${yutList[3]}.png',
+                    width: 60,
+                  ),
+                ),
+              ],
+            ),
           ),
           const SizedBox(
-            height: 50,
+            height: 70,
           ),
           ElevatedButton(
             onPressed: rollYut,
@@ -72,11 +92,11 @@ class _YutRollerState extends State<YutRoller> {
               backgroundColor: MaterialStateProperty.all(Color(0xffa04800)),
             ),
             child: const Text(
-              "윷이요",
+              "YUT IYO",
               style: const TextStyle(
-                fontWeight: FontWeight.w600,
+                fontWeight: FontWeight.bold,
                 color: Color(0xffffe0c1),
-                fontSize: 30,
+                fontSize: 45,
               ),
             ),
           )

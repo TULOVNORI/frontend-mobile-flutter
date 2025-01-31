@@ -9,19 +9,23 @@ class PlayScreenYut extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Color(0xFF152b39),
-        leading: IconButton(
-          icon: const Icon(Icons.chevron_left),
-          color: Colors.white,
-          onPressed: () {
-            Navigator.pop(context);
-          },
-        ),
+        leading: Container(),
+        actions: [
+          IconButton(
+            icon: const Icon(Icons.cancel),
+            iconSize: 35,
+            color: Colors.white,
+            onPressed: () {
+              Navigator.pop(context);
+            },
+          )
+        ],
       ),
       body: Container(
         decoration: const BoxDecoration(
             image: DecorationImage(
           fit: BoxFit.fill,
-          image: AssetImage('images/yut/background.png'),
+          image: AssetImage('assets/images/yut/background.png'),
         )),
         child: Center(
           child: YutRoller(),

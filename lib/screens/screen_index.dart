@@ -53,7 +53,7 @@ class _ScreenIndexState extends State<ScreenIndex> {
                             alignment: Alignment.centerLeft,
                             child: Image(
                               image: ResizeImage(
-                                AssetImage('images/yut/main.png'),
+                                AssetImage('assets/images/yut/main.png'),
                                 width: (screenWidth * 0.9 * 0.5).toInt(),
                               ),
                             ),
@@ -122,7 +122,7 @@ class _ScreenIndexState extends State<ScreenIndex> {
                             alignment: Alignment.centerLeft,
                             child: Image(
                               image: ResizeImage(
-                                AssetImage('images/dice/main.png'),
+                                AssetImage('assets/images/dice/main.png'),
                                 width: (screenWidth * 0.9 * 0.5).toInt(),
                               ),
                             ),
@@ -191,7 +191,7 @@ class _ScreenIndexState extends State<ScreenIndex> {
                             alignment: Alignment.centerLeft,
                             child: Image(
                               image: ResizeImage(
-                                AssetImage('images/deck/main.png'),
+                                AssetImage('assets/images/deck/main.png'),
                                 width: (screenWidth * 0.9 * 0.5).toInt(),
                               ),
                             ),

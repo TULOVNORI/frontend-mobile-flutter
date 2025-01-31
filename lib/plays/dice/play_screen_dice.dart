@@ -42,7 +42,7 @@ class _PlayScreenDiceState extends State<PlayScreenDice> {
             color: Color(0xFF54e08c),
             image: DecorationImage(
               fit: BoxFit.fill,
-              image: AssetImage('images/dice/background.png'),
+              image: AssetImage('assets/images/dice/background.png'),
             )),
         child: Column(
           children: [

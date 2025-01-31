@@ -49,7 +49,8 @@ class _TwoDiceRollerState extends State<TwoDiceRoller> {
                     child: Container(
                       width: screenWidth * 0.45,
                       child: Image(
-                        image: AssetImage('images/dice/dice_$diceNum1.png'),
+                        image:
+                            AssetImage('assets/images/dice/dice_$diceNum1.png'),
                       ),
                     ),
                   ),
@@ -58,7 +59,8 @@ class _TwoDiceRollerState extends State<TwoDiceRoller> {
                     child: Container(
                       width: screenWidth * 0.45,
                       child: Image(
-                        image: AssetImage('images/dice/dice_2$diceNum2.png'),
+                        image: AssetImage(
+                            'assets/images/dice/dice_2$diceNum2.png'),
                       ),
                     ),
                   ),

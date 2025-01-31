@@ -22,7 +22,7 @@ flutter:
 
   uses-material-design: true
   assets:
-    - images/
-    - images/yut/
-    - images/dice/
-    - images/deck/
+    - assets/images/
+    - assets/images/yut/
+    - assets/images/dice/
+    - assets/images/deck/

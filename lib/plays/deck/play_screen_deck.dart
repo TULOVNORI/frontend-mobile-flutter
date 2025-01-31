@@ -24,7 +24,7 @@ class PlayScreenDeck extends StatelessWidget {
           decoration: const BoxDecoration(
               image: DecorationImage(
             fit: BoxFit.fill,
-            image: AssetImage('images/deck/background.png'),
+            image: AssetImage('assets/images/deck/background.png'),
           )),
           child: Center(
             child: Column(children: [
