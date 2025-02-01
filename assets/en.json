@@ -1,0 +1,22 @@
+{
+  "noris" : [
+    {
+      "nori" : "yut",
+      "title" : "YUT NORI",
+      "buttonText" : "Throw Yut",
+      "description" : "Yutnori is a traditional Korean game where you throw four sticks to move your pieces on the board. Use this app to simulate the throws and play Yutnori anytime!"
+    },
+    {
+      "nori" : "dice",
+      "title" : "ROLL DICE",
+      "buttonText" : "Roll Dice",
+      "description": "Rolling the dice is a common action in board games to determine the outcome of your move. Use this app to roll the dice virtually and enjoy your favorite board games anytime!"
+    },
+    {
+      "nori" : "deck",
+      "title" : "DRAW CARD",
+      "buttonText" : "Draw Card",
+      "description": "Drawing a card from the deck is a key action in many card games. Use this app to simulate drawing cards and enjoy your favorite card games anytime!"
+    }
+  ]
+}

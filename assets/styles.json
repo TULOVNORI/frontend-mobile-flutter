@@ -1,0 +1,11 @@
+{
+  "yut" : {
+    "cardColor" : "0xFF00709b"
+  },
+  "dice" : {
+    "cardColor" : "0xFF7a4b78"
+  },
+  "deck" : {
+    "cardColor" : "0xFF367743"
+  }
+}
