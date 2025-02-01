@@ -76,6 +76,7 @@ class CardWidget extends StatelessWidget {
                                 "nori": nori,
                                 "name": title,
                                 "description": description,
+                                "backgroundColor": backgroundColor
                               });
                         },
                       ),

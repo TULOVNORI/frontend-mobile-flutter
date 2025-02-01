@@ -16,7 +16,7 @@ class _NoriState extends State<ScreenNori> {
 
     return Scaffold(
         appBar: AppBar(
-          backgroundColor: Colors.indigo,
+          backgroundColor: Color(args["backgroundColor"] as int),
           title: Text(
             '${args["name"]}',
             style: TextStyle(
@@ -32,7 +32,7 @@ class _NoriState extends State<ScreenNori> {
             gradient: LinearGradient(
               begin: Alignment.topCenter,
               end: Alignment.bottomCenter,
-              colors: [Colors.indigo, Colors.black],
+              colors: [Color(args["backgroundColor"] as int), Colors.black],
             ),
           ),
           child: Column(
