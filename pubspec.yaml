@@ -11,6 +11,7 @@ dependencies:
     sdk: flutter
 
   cupertino_icons: ^1.0.8
+  flutter_native_splash: ^2.4.4
 
 dev_dependencies:
   flutter_test:
@@ -18,8 +19,16 @@ dev_dependencies:
 
   flutter_lints: ^5.0.0
 
-flutter:
+flutter_native_splash:
+  color: "#f6f4f0"
+  image: assets/images/icon.png
+  android_12:
+    image: assets/images/icon.png
+    icon_background_color : "#f6f4f0"
+    color: "#f6f4f0"
+    branding: assets/images/letter_logo.png
 
+flutter:
   uses-material-design: true
   assets:
     - assets/
