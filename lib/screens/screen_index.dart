@@ -39,15 +39,33 @@ class _ScreenIndexState extends State<ScreenIndex> {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Color(0xFF222222),
-        title: Text(
-          'TULOVNORI',
-          style: TextStyle(
-              fontWeight: FontWeight.bold, fontSize: 35, color: Colors.white),
+        centerTitle: true,
+        title: RichText(
+          text: TextSpan(
+            children: [
+              TextSpan(
+                text: 'TULOVN',
+                style: TextStyle(
+                  fontWeight: FontWeight.bold,
+                  fontSize: 35,
+                  color: Color(0xFFf6f4f0), // 흰색 글자
+                ),
+              ),
+              TextSpan(
+                text: 'ORI',
+                style: TextStyle(
+                  fontWeight: FontWeight.bold,
+                  fontSize: 35,
+                  color: Color(0xFFffd643), // 빨간색 글자
+                ),
+              ),
+            ],
+          ),
         ),
       ),
       body: Container(
         decoration: BoxDecoration(
-          color: Color(0xFF222222),
+          color: Color(0xFFf6f4f0),
         ),
         child: Center(
           child: Container(
